@@ -1,7 +1,7 @@
 const Summary = () => {
   return (
-    <div className='all-summary grid grid-cols-2 gap-4  -mx-5 '>
-      <div className='summary w-full rounded-xl'>
+    <div className='all-summary grid grid-cols-2 gap-4  p-10 px-52'>
+      <div className='summary w-full rounded-lg shadow-lg shadow-slate-50'>
         <h4 className=' font-extrabold text-lg text-slate-700 mb-10'>Visitors</h4>
         <div className='grid grid-cols-2 gap-10'>
           <div className='p-10 bg-slate-200 py-14 rounded-md'>
@@ -14,7 +14,7 @@ const Summary = () => {
           </div>
         </div>
       </div>
-      <div className='summary w-full rounded-xl'>
+      <div className='summary w-full rounded-lg shadow-lg shadow-slate-50'>
         <h4 className=' font-extrabold text-lg text-slate-700 mb-10'>Visitors</h4>
         <div className='grid grid-cols-2 gap-10'>
           <div className='p-10 bg-slate-200 py-14 rounded-md'>
@@ -27,7 +27,7 @@ const Summary = () => {
           </div>
         </div>
       </div>
-      <div className='summary w-full rounded-xl'>
+      <div className='summary w-full rounded-lg shadow-lg shadow-slate-50'>
         <h4 className=' font-extrabold text-lg text-slate-700 mb-10'>Visitors</h4>
         <div className='grid grid-cols-2 gap-10'>
           <div className='p-10 bg-slate-200 py-14 rounded-md'>
@@ -40,7 +40,7 @@ const Summary = () => {
           </div>
         </div>
       </div>
-      <div className='summary w-full rounded-xl'>
+      <div className='summary w-full rounded-lg shadow-lg shadow-slate-50'>
         <h4 className=' font-extrabold text-lg text-slate-700 mb-10'>Visitors</h4>
         <div className='grid grid-cols-2 gap-10'>
           <div className='p-10 bg-slate-200 py-14 rounded-md'>

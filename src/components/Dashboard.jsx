@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Data } from './Data'
 import VisitorsChart from './VisitorsChart'
 import Summary from './Summary'
+
 //import './styles.css'
 
 Chart.register(CategoryScale)
@@ -24,12 +25,10 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className='board'>
+      <div className='board bg-white m-20 m-auto mt-16'>
         <p>Live Visitors</p>
         <VisitorsChart chartData={chartData} />
-        <Summary />
       </div>
-      <div></div>
     </>
   )
 }

@@ -2,7 +2,7 @@ import { Line } from 'react-chartjs-2'
 
 function VisitorsChart({ chartData }) {
   return (
-    <div className='chart-container'>
+    <div>
       <Line
         data={chartData}
         options={{
