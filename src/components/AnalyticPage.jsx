@@ -33,6 +33,19 @@ const AnalyticPage = () => {
             <h3 className=' text-center font-bold text-3xl'>0</h3>
           </div>
         </div>
+        <div className='p-4 bg-white  my-10 rounded-lg '>
+          <div className='flex justify-between'>
+            <h3 className=' font-bold'>Top locations for Audience</h3>
+            <h3 className=' font-bold flex gap-4'>
+              View all <DownIcon />
+            </h3>
+          </div>
+          <div className='p-10'>
+            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
+              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
