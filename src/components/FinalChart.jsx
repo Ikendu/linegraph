@@ -8,10 +8,10 @@ const FinalChart = ({ chartData }) => {
         <p className=''>
           Conversation Analytics <DownIcon />
         </p>
-        <div className='flex justify-between'>
-          <span>12 Months</span>
-          <span>30 Days</span>
-          <span>7 Days</span>
+        <div className='flex justify-between center items-center'>
+          <span className='text-lg text-xl text-gray-600 font-semibold'>12 Months</span>
+          <span className='text-lg text-xl text-gray-600 font-semibold'>30 Days</span>
+          <span className='text-lg text-xl text-gray-600 font-semibold'>7 Days</span>
           <span>
             <PlusIcon />
           </span>{' '}
@@ -31,9 +31,15 @@ const FinalChart = ({ chartData }) => {
             },
           },
           scales: {
+            x: {
+              ticks: {
+                maxTicksLimit: 12,
+              },
+              grid: { display: false },
+            },
             y: {
               ticks: {
-                maxTicksLimit: 8,
+                maxTicksLimit: 7,
               },
             },
           },
