@@ -1,6 +1,21 @@
+import { useState } from 'react'
 import { DownIcon } from '../assets/Icons'
-
+import { Data2 } from './Data2'
+import FinalChart from './FinalChart'
 const AnalyticPage = () => {
+  const [chartData, setChartData] = useState({
+    labels: Data2.map((data) => data.month),
+    datasets: [
+      {
+        label: 'Users Gained ',
+        data: Data2.map((data) => data.visitors),
+        backgroundColor: ['white', 'white', 'white', 'white', 'white'],
+        borderColor: 'blue',
+        borderWidth: 2,
+      },
+    ],
+  })
+
   return (
     <div className='bg-white'>
       <div className=' p-10 pb-7 text-xl font-semibold'>Analytics</div>
@@ -33,6 +48,13 @@ const AnalyticPage = () => {
             <h3 className=' text-center font-bold text-3xl'>0</h3>
           </div>
         </div>
+        <div className='flex justify-between mt-20 gap-40 gap-36 '>
+          <div className='w-full bg-white rounded-xl p-7'>
+            <FinalChart chartData={chartData} />
+          </div>
+
+          <div className=' h-28 w-100 w-96 p p-12 bg-slate-500 '></div>
+        </div>
         <div className='p-4 bg-white  my-10 rounded-lg '>
           <div className='flex justify-between'>
             <h3 className=' font-bold'>Top locations for Audience</h3>
@@ -40,7 +62,17 @@ const AnalyticPage = () => {
               View all <DownIcon />
             </h3>
           </div>
-          <div className='p-10'>
+
+          <div className='px-10 py-3 flex justify-between'>
+            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
+              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
+            </div>
+            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
+              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
+            </div>
+            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
+              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
+            </div>
             <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
               <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
             </div>
