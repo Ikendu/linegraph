@@ -26,21 +26,15 @@ const FinalChart = ({ chartData }) => {
             title: {
               display: true,
             },
-            legend: {
-              display: false,
-            },
+            legend: { display: false },
           },
           scales: {
             x: {
-              ticks: {
-                maxTicksLimit: 12,
-              },
+              ticks: { maxTicksLimit: 12 },
               grid: { display: false },
             },
             y: {
-              ticks: {
-                maxTicksLimit: 7,
-              },
+              ticks: { maxTicksLimit: 7 },
             },
           },
         }}

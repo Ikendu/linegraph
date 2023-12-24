@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { DownIcon } from '../assets/Icons'
 import { Data2 } from './Data2'
+import { DataBar } from './DataBar'
 import FinalChart from './FinalChart'
+import BarChart from './BarChart'
 const AnalyticPage = () => {
   const [chartData, setChartData] = useState({
     labels: Data2.map((data) => data.month),
@@ -9,6 +11,18 @@ const AnalyticPage = () => {
       {
         label: 'Users Gained ',
         data: Data2.map((data) => data.visitors),
+        backgroundColor: ['white', 'white', 'white', 'white', 'white'],
+        borderColor: 'blue',
+        borderWidth: 2,
+      },
+    ],
+  })
+  const [chartData2, setChartData2] = useState({
+    labels: DataBar.map((data) => data.time),
+    datasets: [
+      {
+        label: 'Users Gained ',
+        data: DataBar.map((data) => data.visitors),
         backgroundColor: ['white', 'white', 'white', 'white', 'white'],
         borderColor: 'blue',
         borderWidth: 2,
@@ -53,7 +67,9 @@ const AnalyticPage = () => {
             <FinalChart chartData={chartData} />
           </div>
 
-          <div className=' h-28 w-100 w-96 p p-12 bg-slate-500 '></div>
+          <div className=''>
+            <BarChart chartData={chartData2} />
+          </div>
         </div>
         <div className='p-4 bg-white  my-10 rounded-lg '>
           <div className='flex justify-between'>
