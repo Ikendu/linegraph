@@ -26,6 +26,7 @@ const AnalyticPage = () => {
         backgroundColor: ['white', 'white', 'white', 'white', 'white'],
         borderColor: 'blue',
         borderWidth: 2,
+        bmargin: 5,
       },
     ],
   })
@@ -62,7 +63,7 @@ const AnalyticPage = () => {
             <h3 className=' text-center font-bold text-3xl'>0</h3>
           </div>
         </div>
-        <div className='flex justify-between mt-20 gap-40 gap-36 '>
+        <div className='flex justify-between mt-20 gap-28 '>
           <div className='w-full bg-white rounded-xl p-7'>
             <FinalChart chartData={chartData} />
           </div>

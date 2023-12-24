@@ -34,7 +34,8 @@ const FinalChart = ({ chartData }) => {
               grid: { display: false },
             },
             y: {
-              ticks: { maxTicksLimit: 7 },
+              ticks: { maxTicksLimit: 8, display: false },
+              border: { display: false },
             },
           },
         }}
