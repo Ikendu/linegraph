@@ -22,6 +22,7 @@ function VisitorsChart({ chartData }) {
                 maxTicksLimit: 8,
               },
             },
+            x: { grid: { display: false } },
           },
         }}
       />

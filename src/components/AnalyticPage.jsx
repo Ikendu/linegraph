@@ -18,19 +18,26 @@ const AnalyticPage = () => {
     ],
   })
   let bigData = 0
+  let highColor = []
   DataBar.map((data) => {
-    if (data.visitors > bigData) bigData = data.visitors
-    return bigData
+    if (data.visitors > bigData) {
+      bigData = data.visitors
+    }
   })
-  console.log(bigData)
-  const [chartData2, setChartData2] = useState({
+
+  DataBar.map((data) => {
+    if (data.visitors === bigData) highColor.push(`blue`)
+    else highColor.push(`red`)
+  })
+
+  const [chartData2] = useState({
     labels: DataBar.map((data) => data.time),
     datasets: [
       {
         label: 'Users Gained ',
         data: DataBar.map((data) => data.visitors),
 
-        backgroundColor: ['#cfcccc', '#cfcccc', '#cfcccc', '#cfcccc', '#cfcccc', '#cfcccc'],
+        backgroundColor: highColor,
         // backgroundColor: () => {
         //   const newData = DataBar.find((data) => data.visitors === bigData)
         //   console.log(bigData)
