@@ -2,7 +2,7 @@ import { Bar } from 'react-chartjs-2'
 
 const BarChart = ({ chartData }) => {
   return (
-    <div className='text-center bg-white p-4 rounded-lg'>
+    <div className='text-center bg-white p-5  rounded-lg'>
       <div className=' mb-5'>
         <h2 className='font-bold text-lg m-2'>Conversation Durations</h2>
         <h3 className='font-bold text-lg m-2 text-gray-500'>On average</h3>
@@ -10,7 +10,7 @@ const BarChart = ({ chartData }) => {
       </div>
 
       <Bar
-        className='w-80'
+        className=''
         data={chartData}
         options={{
           plugins: {

@@ -52,7 +52,7 @@ const AnalyticPage = () => {
           <button className='bg-white rounded-xl p-3 px-8 flex gap-5 font-bold'>
             20 AUG 2023 - 0 DEC 2023 <DownIcon />
           </button>
-          <button className='bg-white rounded-xl p-3 px-6 flex gap-32 font-bold'>
+          <button className='bg-white rounded-xl p-3  px-9 flex  gap-40 font-bold'>
             Operations <DownIcon />
           </button>
         </div>
@@ -71,7 +71,7 @@ const AnalyticPage = () => {
               <h3 className=' text-center font-bold text-3xl'>15</h3>
             </span>
           </div>
-          <div className='bg-white p-10 rounded-lg'>
+          <div className='bg-white p-10 px-14 rounded-lg'>
             <p>Conversations Taken over by bot</p>
             <h3 className=' text-center font-bold text-3xl'>0</h3>
           </div>
