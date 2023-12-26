@@ -76,7 +76,7 @@ const AnalyticPage = () => {
             <h3 className=' text-center font-bold text-3xl'>0</h3>
           </div>
         </div>
-        <div className='flex justify-between mt-20 gap-28 '>
+        <div className='flex justify-between mt-20 gap-24 '>
           <div className='w-full bg-white rounded-xl p-7'>
             <FinalChart chartData={chartData} />
           </div>

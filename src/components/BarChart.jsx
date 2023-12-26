@@ -2,8 +2,8 @@ import { Bar } from 'react-chartjs-2'
 
 const BarChart = ({ chartData }) => {
   return (
-    <div className='text-center bg-white p-5  rounded-lg'>
-      <div className=' mb-5'>
+    <div className='text-center bg-white p-5  rounded-lg pb-10'>
+      <div className=' mb-10 '>
         <h2 className='font-bold text-lg m-2'>Conversation Durations</h2>
         <h3 className='font-bold text-lg m-2 text-gray-500'>On average</h3>
         <h3 className='font-bold  m-2 text-2xl text-gray-600'>10 hrs</h3>

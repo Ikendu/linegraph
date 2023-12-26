@@ -3,9 +3,9 @@ import { DownIcon, PlusIcon } from '../assets/Icons'
 
 const FinalChart = ({ chartData }) => {
   return (
-    <div>
+    <div className='px-2'>
       <div className='grid grid-cols-2 '>
-        <p className=''>
+        <p className='flex gap-2'>
           Conversation Analytics <DownIcon />
         </p>
         <div className='flex justify-between center items-center'>
