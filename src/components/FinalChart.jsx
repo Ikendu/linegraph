@@ -22,6 +22,8 @@ const FinalChart = ({ chartData }) => {
         options={{
           tension: 0.4,
           pointRadius: 0,
+          elements: { point: { hoverRadius: 10 } },
+          hover: { mode: `index`, intersect: false },
           plugins: {
             title: {
               display: true,

@@ -11,9 +11,22 @@ const AnalyticPage = () => {
       {
         label: 'Users Gained ',
         data: Data2.map((data) => data.visitors),
-        backgroundColor: ['white', 'white', 'white', 'white', 'white'],
+        //backgroundColor: ['blue', 'transparent'],
+        backgroundColor: (context) => {
+          const bgColor = [`blue`, `blue`, `transparent`]
+          if (!context.chart.chartArea) return
+          const {
+            ctx,
+            chartArea: { top, bottom },
+          } = context.chart
+          const bgGradient = ctx.createLinearGradient(0, top, 0, bottom)
+          bgGradient.addColorStop(0, bgColor[0])
+          bgGradient.addColorStop(0.7, bgColor[2])
+          return bgGradient
+        },
         borderColor: 'blue',
         borderWidth: 2,
+        fill: true,
       },
     ],
   })
@@ -27,7 +40,7 @@ const AnalyticPage = () => {
 
   DataBar.map((data) => {
     if (data.visitors === bigData) highColor.push(`blue`)
-    else highColor.push(`red`)
+    else highColor.push(`#c9c4c4`)
   })
 
   const [chartData2] = useState({
@@ -38,14 +51,7 @@ const AnalyticPage = () => {
         data: DataBar.map((data) => data.visitors),
 
         backgroundColor: highColor,
-        // backgroundColor: () => {
-        //   const newData = DataBar.find((data) => data.visitors === bigData)
-        //   console.log(bigData)
-        //   if (newData) return [`black`]
-        //   else return [`gray`]
-        // },
 
-        //borderColor: 'blue',
         borderWidth: 1,
       },
     ],

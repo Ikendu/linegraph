@@ -16,7 +16,7 @@ const Dashboard = () => {
       {
         label: 'Users Gained ',
         data: Data.map((data) => data.visitors),
-        backgroundColor: ['white', 'white', 'white', 'white', 'white'],
+        backgroundColor: 'white',
         borderColor: 'blue',
         borderWidth: 2,
       },
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className='board bg-white m-20 m-auto mt-16'>
+      <div className='board bg-white m-auto mt-16'>
         <p>Live Visitors</p>
         <VisitorsChart chartData={chartData} />
       </div>
