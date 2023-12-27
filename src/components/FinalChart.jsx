@@ -20,9 +20,13 @@ const FinalChart = ({ chartData }) => {
       <Line
         data={chartData}
         options={{
+          //maintainAspectRatio: false,
           tension: 0.4,
           pointRadius: 0,
-          elements: { point: { hoverRadius: 10 } },
+
+          elements: {
+            point: { hoverRadius: 10, hoverBackgroundColor: `green`, hoverBorderColor: `green` },
+          },
           hover: { mode: `index`, intersect: false },
           plugins: {
             title: {
