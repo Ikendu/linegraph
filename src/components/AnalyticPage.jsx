@@ -103,21 +103,20 @@ const AnalyticPage = () => {
           </div>
 
           <div className='px-10 py-3 flex justify-between'>
-            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
-              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
-            </div>
-            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
-              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
-            </div>
-            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
-              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
-            </div>
-            <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
-              <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
-            </div>
+            <TopLocations />
+            <TopLocations />
+            <TopLocations />
+            <TopLocations />
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+const TopLocations = () => {
+  return (
+    <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
+      <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
     </div>
   )
 }
