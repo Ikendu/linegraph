@@ -33,9 +33,7 @@ const AnalyticPage = () => {
   let bigData = 0
   let highColor = []
   DataBar.map((data) => {
-    if (data.visitors > bigData) {
-      bigData = data.visitors
-    }
+    if (data.visitors > bigData) bigData = data.visitors
   })
 
   DataBar.map((data) => {
@@ -49,9 +47,7 @@ const AnalyticPage = () => {
       {
         label: 'Users Gained ',
         data: DataBar.map((data) => data.visitors),
-
         backgroundColor: highColor,
-
         borderWidth: 1,
       },
     ],
