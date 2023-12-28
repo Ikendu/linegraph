@@ -1,10 +1,17 @@
 import { Line } from 'react-chartjs-2'
 import { DownIcon, PlusIcon } from '../assets/Icons'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const stlye = 'text-lg text-lg text-gray-600 font-semibold p-3 px-4'
-//const newStyle = 'text-lg text-xl text-gray-600 font-semibold p-3 px-4 bg-blue-500'
+const stlye = 'text-lg text-lg text-gray-600 font-semibold p-3 px-4 cursor-pointer'
+const newStyle = stlye + 'px-4 bg-blue-700 rounded-xl text-white cursor-pointer'
+
 const FinalChart = ({ chartData }) => {
+  const [stlye1, setStyle1] = useState(stlye)
+
+  useEffect(() => {
+    setStyle1(newStyle)
+  }, [])
+
   return (
     <div className='px-2 '>
       <div className='grid grid-cols-2 items-center'>
@@ -12,7 +19,7 @@ const FinalChart = ({ chartData }) => {
           Conversation Analytics <DownIcon />
         </p>
         <div className='flex justify-between items-center'>
-          <span className={stlye}>12 Months</span>
+          <span className={stlye1}>12 Months</span>
           <span className={stlye}>30 Days</span>
           <span className={stlye}>7 Days</span>
           <span>
