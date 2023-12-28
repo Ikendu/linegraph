@@ -4,6 +4,7 @@ import { Data2 } from './Data2'
 import { DataBar } from './DataBar'
 import FinalChart from './FinalChart'
 import BarChart from './BarChart'
+
 const AnalyticPage = () => {
   const [chartData, setChartData] = useState({
     labels: Data2.map((data) => data.month),
@@ -67,18 +68,9 @@ const AnalyticPage = () => {
         </div>
         <div className='flex justify-between mt-8'>
           <div className='flex gap-10 '>
-            <span className='bg-white p-10 rounded-lg'>
-              <p>All conversations</p>
-              <h3 className=' text-center font-bold text-3xl'>69</h3>
-            </span>
-            <span className='bg-white p-10 rounded-lg'>
-              <p>Handled conversations</p>
-              <h3 className=' text-center font-bold text-3xl'>20</h3>
-            </span>
-            <span className='bg-white p-10 rounded-lg'>
-              <p>Missed conversations</p>
-              <h3 className=' text-center font-bold text-3xl'>15</h3>
-            </span>
+            <Analysis topic={`All conversations`} count={70} />
+            <Analysis topic={`Handled conversations`} count={50} />
+            <Analysis topic={`Missed conversations`} count={20} />
           </div>
           <div className='bg-white p-10 px-14 rounded-lg'>
             <p>Conversations Taken over by bot</p>
@@ -118,6 +110,15 @@ const TopLocations = () => {
     <div className='w-48  h-12 rounded-lg bg-zinc-300 p-1'>
       <div className='w-10 h-10 bg-slate-100 rounded-full'></div>
     </div>
+  )
+}
+
+const Analysis = ({ topic, count }) => {
+  return (
+    <span className='bg-white p-10 rounded-lg'>
+      <p>{topic}</p>
+      <h3 className=' text-center font-bold text-3xl'>{count}</h3>
+    </span>
   )
 }
 export default AnalyticPage
