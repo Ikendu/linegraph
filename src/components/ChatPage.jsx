@@ -45,8 +45,8 @@ const ChatPage = () => {
 const LiveChat = () => {
   return (
     <div>
-      <div>
-        <h3>Live Conversations</h3>
+      <div className=' bg-[#225EA3] w-[209px] h-[95px] text-white'>
+        <h3 className='m-auto'>Live Conversations</h3>
       </div>
       <div>
         Pending <UserMinusIcon />
