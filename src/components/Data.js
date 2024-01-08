@@ -35,3 +35,12 @@ export const Data = [
     visitors: 0,
   },
 ]
+
+export const users = [
+  { name: `Ikenna Eke`, mesg: `He want to talk about login` },
+  { name: `John Eke`, mesg: `can we to talk about login` },
+  { name: `Gowin Eke`, mesg: `they commented on about login` },
+  { name: `Goodluck Eke`, mesg: `I want to talk about login` },
+  { name: `Amaka Eke`, mesg: `we need to talk about login` },
+  { name: `Joy Eke`, mesg: `then its all about login` },
+]

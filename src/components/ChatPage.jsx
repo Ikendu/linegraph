@@ -6,9 +6,11 @@ import {
   HandWellIcon,
   HomeIcon,
   InboxIcon,
+  SearchIcon,
   SettingIcon,
   UserMinusIcon,
 } from '../assets/Icons'
+import { users } from './Data'
 
 const ChatPage = () => {
   return (
@@ -39,6 +41,9 @@ const ChatPage = () => {
         </div>
       </nav>
       <LiveChat />
+      <div className='p-10 bg-[#225EA3] m-10'>
+        <MessageBar />
+      </div>
     </div>
   )
 }
@@ -56,11 +61,33 @@ const LiveChat = () => {
         <div className='flex gap-4'>
           <BoxOpenIcon /> Open
         </div>
-        <div className='flex'>
+        <div className='flex gap-4'>
           <HandWellIcon /> Solved
         </div>
       </div>
     </div>
   )
 }
+
+const MessageBar = () => {
+  return (
+    <div>
+      <form>
+        <SearchIcon />
+        <input type='txst' placeholder='Search' className='p-2 rounded pl-6' />
+      </form>
+      <div>search</div>
+      <div>Open</div>
+      <div>
+        {users.map((user) => (
+          <div key={user.name}>
+            <h3>{user.name}</h3>
+            <p>{user.mesg}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default ChatPage
