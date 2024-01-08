@@ -3,6 +3,7 @@ import {
   ChartIcon,
   ContactIcon,
   EventIcon,
+  HandWellIcon,
   HomeIcon,
   InboxIcon,
   SettingIcon,
@@ -11,8 +12,8 @@ import {
 
 const ChatPage = () => {
   return (
-    <div>
-      <nav className=' bg-[#225EA3] w-[75px] align-middle content-center pt-8'>
+    <div className='flex'>
+      <nav className=' bg-[#225EA3] w-[75px] align-middle content-center pt-8 '>
         <div className='w-10 mx-auto '>
           <div className='flex gap-4 items-center pb-8 w-20'>
             <HomeIcon />
@@ -45,16 +46,20 @@ const ChatPage = () => {
 const LiveChat = () => {
   return (
     <div>
-      <div className=' bg-[#225EA3] w-[209px] h-[95px] text-white'>
-        <h3 className='m-auto'>Live Conversations</h3>
+      <div className='bg-[#225EA3] p-10  text-white text-lg'>
+        <h3 className=''>Live Conversations</h3>
       </div>
-      <div>
-        Pending <UserMinusIcon />
+      <div className='mt-14 ml-7 flex flex-col gap-7 font-semibold text-gray-500 text-[18px] '>
+        <div className='flex gap-4'>
+          <UserMinusIcon /> Pending
+        </div>
+        <div className='flex gap-4'>
+          <BoxOpenIcon /> Open
+        </div>
+        <div className='flex'>
+          <HandWellIcon /> Solved
+        </div>
       </div>
-      <div>
-        Open <BoxOpenIcon />
-      </div>
-      <div>Solved</div>
     </div>
   )
 }
