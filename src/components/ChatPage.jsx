@@ -1,10 +1,12 @@
 import {
+  BoxOpenIcon,
   ChartIcon,
   ContactIcon,
   EventIcon,
   HomeIcon,
   InboxIcon,
   SettingIcon,
+  UserMinusIcon,
 } from '../assets/Icons'
 
 const ChatPage = () => {
@@ -35,6 +37,24 @@ const ChatPage = () => {
           </div>
         </div>
       </nav>
+      <LiveChat />
+    </div>
+  )
+}
+
+const LiveChat = () => {
+  return (
+    <div>
+      <div>
+        <h3>Live Conversations</h3>
+      </div>
+      <div>
+        Pending <UserMinusIcon />
+      </div>
+      <div>
+        Open <BoxOpenIcon />
+      </div>
+      <div>Solved</div>
     </div>
   )
 }
