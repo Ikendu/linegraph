@@ -2,6 +2,8 @@ import {
   BoxOpenIcon,
   ChartIcon,
   ContactIcon,
+  DotIcon,
+  DotvertIcon,
   EventIcon,
   HandWellIcon,
   HomeIcon,
@@ -41,9 +43,8 @@ const ChatPage = () => {
         </div>
       </nav>
       <LiveChat />
-      <div className='p-10 bg-[#225EA3] m-10'>
-        <MessageBar />
-      </div>
+      <MessageBar />
+      <UserChats />
     </div>
   )
 }
@@ -71,20 +72,47 @@ const LiveChat = () => {
 
 const MessageBar = () => {
   return (
-    <div>
-      <form>
-        <SearchIcon />
-        <input type='txst' placeholder='Search' className='p-2 rounded pl-6' />
+    <div className='p-10 bg-[#225EA3] m-10 h-[977px]'>
+      <form className='just justify-center relative'>
+        <div className='absolute m-3'>
+          {' '}
+          <SearchIcon />
+        </div>
+
+        <input type='text' placeholder='Search' className='p-3 pl-10 rounded w-full' />
       </form>
-      <div>search</div>
-      <div>Open</div>
+      <div className='text-white py-8'>{`Open`}</div>
       <div>
         {users.map((user) => (
-          <div key={user.name}>
-            <h3>{user.name}</h3>
-            <p>{user.mesg}</p>
+          <div
+            key={user.name}
+            className='p-4 b-2 border my-5 rounded text-white relative flex gap-3  '
+          >
+            <div className='w-12 h-12 bg-slate-400 rounded-full'></div>
+            <div>
+              <div className='absolute right-0 top-0 p-1'>
+                <DotIcon />
+              </div>
+              <h3 className='font-semibold text-lg'>{user.name}</h3>
+              <p>{user.mesg}</p>
+            </div>
           </div>
         ))}
+      </div>
+    </div>
+  )
+}
+
+const UserChats = () => {
+  return (
+    <div className='mt-10 h-[977px] bg-white p-10'>
+      <h3>Messages</h3>
+      <div>
+        <div></div>
+        <div></div>
+        <div>
+          <DotvertIcon />
+        </div>
       </div>
     </div>
   )
