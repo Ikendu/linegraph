@@ -44,3 +44,12 @@ export const users = [
   { name: `Amaka Eke`, mesg: `we need to talk about login` },
   { name: `Joy Eke`, mesg: `then its all about login` },
 ]
+
+export const admin = [
+  { name: `Ikenna Eke`, mesg: `How may I help you` },
+  { name: `John Eke`, mesg: `Welcome can we talk now ` },
+  { name: `Gowin Eke`, mesg: `You can do that` },
+  { name: `Goodluck Eke`, mesg: `Yes use your password` },
+  { name: `Amaka Eke`, mesg: `we need to talk about login` },
+  { name: `Joy Eke`, mesg: `have a wonderful day` },
+]

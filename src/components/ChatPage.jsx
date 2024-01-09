@@ -1,5 +1,6 @@
 import {
   BoxOpenIcon,
+  CallsIcon,
   ChartIcon,
   ContactIcon,
   DotIcon,
@@ -11,12 +12,13 @@ import {
   SearchIcon,
   SettingIcon,
   UserMinusIcon,
+  VideoIcon,
 } from '../assets/Icons'
-import { users } from './Data'
+import { admin, users } from './Data'
 
 const ChatPage = () => {
   return (
-    <div className='flex'>
+    <div className='flex bg-gray-200'>
       <nav className=' bg-[#225EA3] w-[75px] align-middle content-center pt-8 '>
         <div className='w-10 mx-auto '>
           <div className='flex gap-4 items-center pb-8 w-20'>
@@ -86,9 +88,11 @@ const MessageBar = () => {
         {users.map((user) => (
           <div
             key={user.name}
-            className='p-4 b-2 border my-5 rounded text-white relative flex gap-3  '
+            className='p-4 b-2 border  border-t-white border-b-blue-500 my-5 rounded text-white relative flex gap-3  '
           >
-            <div className='w-12 h-12 bg-slate-400 rounded-full'></div>
+            <div className='w-14 h-14 bg-slate-400 rounded-full relative'>
+              <div className='w-3 h-3 bg-green-500 rounded-full border-2 b  absolute right-0 bottom-0'></div>
+            </div>
             <div>
               <div className='absolute right-0 top-0 p-1'>
                 <DotIcon />
@@ -105,14 +109,26 @@ const MessageBar = () => {
 
 const UserChats = () => {
   return (
-    <div className='mt-10 h-[977px] bg-white p-10'>
+    <div className='mt-10 h-[977px] bg-white p-10 relative'>
       <h3>Messages</h3>
-      <div>
-        <div></div>
-        <div></div>
-        <div>
+      <div className='flex gap-2 absolute right-0'>
+        <div className='p-2 rounded-full bg-slate-200 text-gray-600'>
+          <CallsIcon />
+        </div>
+        <div className='p-2 rounded-full bg-slate-200 text-gray-600'>
+          <VideoIcon />
+        </div>
+        <div className='p-2 rounded-full bg-slate-200 text-gray-600'>
           <DotvertIcon />
         </div>
+      </div>
+
+      <div className='mt-10 text-gray-600 flex gap-4 items-center'>
+        <div className='border-b w-10 max-w-80 '></div>
+        {`January 23, 2024`}
+      </div>
+      <div className='border rounded-xl p-10'>
+        <input type='text' placeholder='Type a message...' className='w-full' />
       </div>
     </div>
   )
