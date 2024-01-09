@@ -1,7 +1,9 @@
 import {
+  AttarchIcon,
   BoxOpenIcon,
   CallsIcon,
   ChartIcon,
+  ChatIcon,
   ContactIcon,
   DotIcon,
   DotvertIcon,
@@ -9,10 +11,14 @@ import {
   HandWellIcon,
   HomeIcon,
   InboxIcon,
+  MessageIcon,
   SearchIcon,
+  SenderIcon,
   SettingIcon,
+  SmileIcon,
   UserMinusIcon,
   VideoIcon,
+  VideoIcon2,
 } from '../assets/Icons'
 import { admin, users } from './Data'
 
@@ -124,11 +130,29 @@ const UserChats = () => {
       </div>
 
       <div className='mt-10 text-gray-600 flex gap-4 items-center'>
-        <div className='border-b w-10 max-w-80 '></div>
+        <div className='border-b w-96 max-w-[300px] m-4 '></div>
         {`January 23, 2024`}
       </div>
-      <div className='border rounded-xl p-10'>
-        <input type='text' placeholder='Type a message...' className='w-full' />
+      <div className='border rounded-xl p-4 w-full px-10 text-gray-500'>
+        <div className='flex gap-4 items-center'>
+          <div className='flex gap-1 items-center text-xs'>
+            <ChatIcon /> Chat
+          </div>
+          <div className='flex gap-1 items-center text-xs'>
+            <MessageIcon /> Email
+          </div>
+        </div>
+        <input type='text' placeholder='Type a message...' className='w-full p-10 outline-none' />
+        <div className='flex gap-4 items-center relative'>
+          <AttarchIcon />
+          <SmileIcon />
+          <div className='border-l pl-4 '>
+            <VideoIcon2 />
+          </div>
+          <div className='absolute right-0'>
+            <SenderIcon />
+          </div>
+        </div>
       </div>
     </div>
   )

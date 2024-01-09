@@ -262,7 +262,7 @@ export const ChatIcon = () => (
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
     fill='currentColor'
-    className='w-6 h-6'
+    className='w-4 h-4'
   >
     <path
       fillRule='evenodd'
@@ -277,13 +277,10 @@ export const MessageIcon = () => (
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
     fill='currentColor'
-    className='w-6 h-6'
+    className='w-4 h-4 '
   >
-    <path
-      fillRule='evenodd'
-      d='M5.337 21.718a6.707 6.707 0 0 1-.533-.074.75.75 0 0 1-.44-1.223 3.73 3.73 0 0 0 .814-1.686c.023-.115-.022-.317-.254-.543C3.274 16.587 2.25 14.41 2.25 12c0-5.03 4.428-9 9.75-9s9.75 3.97 9.75 9c0 5.03-4.428 9-9.75 9-.833 0-1.643-.097-2.417-.279a6.721 6.721 0 0 1-4.246.997Z'
-      clipRule='evenodd'
-    />
+    <path d='M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z' />
+    <path d='M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z' />
   </svg>
 )
 
@@ -315,6 +312,34 @@ export const SmileIcon = () => (
       strokeLinecap='round'
       strokeLinejoin='round'
       d='M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z'
+    />
+  </svg>
+)
+
+export const SenderIcon = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    fill='currentColor'
+    className='w-6 h-6'
+  >
+    <path d='M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z' />
+  </svg>
+)
+
+export const VideoIcon2 = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    fill='none'
+    viewBox='0 0 24 24'
+    strokeWidth={1.5}
+    stroke='currentColor'
+    className='w-6 h-6'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      d='m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z'
     />
   </svg>
 )
