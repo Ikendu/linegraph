@@ -37,19 +37,97 @@ export const Data = [
 ]
 
 export const users = [
-  { name: `Ikenna Eke`, mesg: `He want to talk about login` },
-  { name: `John Eke`, mesg: `can we to talk about login` },
-  { name: `Gowin Eke`, mesg: `they commented on about login` },
-  { name: `Goodluck Eke`, mesg: `I want to talk about login` },
-  { name: `Amaka Eke`, mesg: `we need to talk about login` },
-  { name: `Joy Eke`, mesg: `then its all about login` },
+  {
+    name: `Ikenna Eke`,
+    mesg: `He want to talk about login`,
+    time: `16 min ago`,
+  },
+  {
+    name: `John Ani`,
+    mesg: `can we to talk about login`,
+    time: `17 min ago`,
+  },
+  {
+    name: `Ikenna Eke`,
+    mesg: `He want to talk about login`,
+    time: `16 min ago`,
+  },
+  {
+    name: `John Ani`,
+    mesg: `can we to talk about login`,
+    time: `17 min ago`,
+  },
+  {
+    name: `Gowin Eke`,
+    mesg: `they comment on about login`,
+    time: `18 min ago`,
+  },
+  {
+    name: `John Ani`,
+    mesg: `can we to talk about login`,
+    time: `17 min ago`,
+  },
+  {
+    name: `Ikenna Eke`,
+    mesg: `He want to talk about login`,
+    time: `16 min ago`,
+  },
+  {
+    name: `John Ani`,
+    mesg: `can we to talk about login`,
+    time: `17 min ago`,
+  },
+  {
+    name: `Goodluck Eke`,
+    mesg: `I want to talk about login`,
+    time: `19 min ago`,
+  },
+  {
+    name: `Ikenna Eke`,
+    mesg: `He want to talk about login`,
+    time: `16 min ago`,
+  },
+  {
+    name: `Amaka Eke`,
+    mesg: `we need to talk about login`,
+    time: `20 min ago`,
+  },
+  {
+    name: `Joy Eke`,
+    mesg: `then its all about login`,
+    time: `21 min ago`,
+  },
 ]
 
 export const admin = [
-  { name: `Ikenna Eke`, mesg: `How may I help you` },
-  { name: `John Eke`, mesg: `Welcome can we talk now ` },
-  { name: `Gowin Eke`, mesg: `You can do that` },
-  { name: `Goodluck Eke`, mesg: `Yes use your password` },
-  { name: `Amaka Eke`, mesg: `we need to talk about login` },
-  { name: `Joy Eke`, mesg: `have a wonderful day` },
+  {
+    name: `Ikenna Eke`,
+    mesg: `How may I help you`,
+    time: `15 min ago`,
+  },
+  {
+    name: `John Eke`,
+    mesg: `Welcome can we talk now `,
+    time: `16 min ago`,
+  },
+  {
+    name: `Gowin Eke`,
+    mesg: `You can do that`,
+    time: `17 min ago`,
+  },
+  {
+    name: `Goodluck Eke`,
+    mesg: `Yes use your password`,
+    time: `18 min ago`,
+  },
+  {
+    name: `Amaka Eke`,
+    mesg: `we need to talk about login`,
+    time: `29 min ago`,
+  },
+  {
+    name: `Joy Eke`,
+    mesg: `have a wonderful day`,
+    time: `22 min ago`,
+  },
 ]

@@ -26,8 +26,8 @@ import {
   UserIcon2,
   UserMinusIcon,
   VideoIcon,
-} from '../assets/Icons'
-import { admin, users } from './Data'
+} from '../../assets/Icons'
+import { admin, users } from '../Data'
 
 const ChatPage = () => {
   return (
@@ -88,7 +88,7 @@ const LiveChat = () => {
 
 const MessageBar = () => {
   return (
-    <div className='pt-4 px-6 bg-[#225EA3] mt-10 m-4 '>
+    <div className='pt-4 px-6 bg-[#225EA3] mt-20 '>
       <form className='just justify-center relative'>
         <div className='absolute m-3'>
           {' '}
@@ -103,7 +103,7 @@ const MessageBar = () => {
             key={user.name}
             className='p-4 b-2 border border-t-white border-b-blue-500 my-5 rounded text-white relative flex gap-3  '
           >
-            <div className='w-10 h-10 bg-slate-400 rounded-full relative'>
+            <div className='w-11 h-8 bg-slate-400 rounded-full relative'>
               <div className='w-2 h-2 bg-green-500 rounded-full border-2 b  absolute right-0 bottom-0'></div>
             </div>
             <div>
@@ -120,9 +120,13 @@ const MessageBar = () => {
   )
 }
 
+import smileIcon from './Icons/smile.svg'
+import UploadIcon from './Icons/upload.svg'
+import videoIcon from './Icons/video.svg'
+
 const UserChats = () => {
   return (
-    <div className='mt-10 bg-white p-10 relative '>
+    <div className='mt-20 bg-white p-10 relative border-2 shadow-lg '>
       <h3>Messages</h3>
       <div className='flex gap-2 absolute right-10'>
         <div className='p-2 rounded-full bg-slate-200 text-gray-600'>
@@ -137,8 +141,27 @@ const UserChats = () => {
       </div>
 
       <div className='mt-10 text-gray-600 flex gap-4 items-center py-10'>
-        <div className='border-b w-[300px] m-4 '></div>
+        <div className='border-b w-[250px] m-4 '></div>
         {`January 23, 2024`}
+      </div>
+      <div>
+        {users.map((user, idx) => (
+          <div key={user.name} className='p-2 w-full'>
+            <div className='bg-[#f1f1f7] p-3 rounded-md w-full flex gap-4'>
+              <div>
+                <div className='h-10 w-10 bg-[#f3d0c6] rounded-full'></div>
+              </div>
+              <div>
+                <div className='flex justify-between items-center '>
+                  <div className='font-semibold text-gray-500'>{user.name}</div>
+                  <div className='text-[10px] text-gray-400'>{user.time}</div>
+                </div>
+
+                <div className='thin text-gray-500'>{user.mesg}</div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
       <div className='border rounded-xl p-4 w-full px-10 text-gray-500'>
         <div className='flex gap-4 items-center'>
@@ -155,10 +178,10 @@ const UserChats = () => {
           className='w-full py-10 outline-none'
         />
         <div className='flex gap-4 relative'>
-          <img src='./Icons/upload.svg' />
-          <img src='./Icons/smile.svg' />
+          <img src={UploadIcon} />
+          <img src={smileIcon} />
           <div className='border-l pl-4 '>
-            <img src='./Icons/video.svg' />
+            <img src={videoIcon} />
           </div>
           <div className='absolute right-0'>
             <SenderIcon />
@@ -169,9 +192,13 @@ const UserChats = () => {
   )
 }
 
+import tagIcon from './Icons/tag.svg'
+import userIcon from './Icons/user.svg'
+import wifiIconIcon from './Icons/wifiIcon.svg'
+
 const UserDetails = () => {
   return (
-    <div className='mt-10 ml-4 bg-white relative'>
+    <div className='mt-20 bg-white relative border-2'>
       <div>
         <div className='flex gap-3 mt-5 m-4 text-gray-500'>
           <p>Info</p>
@@ -197,7 +224,7 @@ const UserDetails = () => {
             <p>45 Aku Road Nsukka, Enugu</p>
           </div>
           <div className='flex gap-3'>
-            <img src='./Icons/wifiIcon.svg' /> 102.988.234.02
+            <img src={wifiIconIcon} /> 102.988.234.02
           </div>
           <div className='flex gap-3'>
             <ComputerIcon />
@@ -208,12 +235,12 @@ const UserDetails = () => {
             <p>Add Note</p>
           </div>
           <div className='flex gap-3'>
-            <img src='./Icons/tag.svg' />
+            <img src={tagIcon} />
             <p>Add a tag</p>
             <PlusCircle />
           </div>
           <div className='flex gap-3'>
-            <img src='./Icons/user.svg' />
+            <img src={userIcon} />
             <p>Assignee: Omejeani...</p>
           </div>
         </div>

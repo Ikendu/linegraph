@@ -1,6 +1,6 @@
 import './App.css'
 import AnalyticPage from './components/AnalyticPage'
-import ChatPage from './components/ChatPage'
+import ChatPage from './components/ChatPage/ChatPage'
 // import SideBar from './components/SideBar'
 import Dashboard from './components/Dashboard'
 import Summary from './components/Summary'
