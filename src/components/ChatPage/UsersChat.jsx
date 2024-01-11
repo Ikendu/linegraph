@@ -15,7 +15,11 @@ import { admin } from './data'
 const UserChats = ({ current }) => {
   const [input, setInput] = useState({ mesg: `` })
 
-  const [userMesg, setUserMesg] = useState(current)
+  const [userMesg, setUserMesg] = useState([])
+
+  // useEffect(() => {
+  //   setUserMesg(current)
+  // }, [])
 
   const handleChange = (e) => {
     let id = current[0]?.id
@@ -42,7 +46,7 @@ const UserChats = ({ current }) => {
   return (
     <div className="mt-20 bg-white p-10 relative border-2 shadow-lg ">
       <h3>Messages</h3>
-      <div className="flex gap-2 absolute right-10">
+      <div className="flex gap-2 absolute right-10 cursor-pointer">
         <div className="p-2 rounded-full bg-slate-200 text-gray-600">
           <CallsIcon />
         </div>
@@ -101,7 +105,7 @@ const UserChats = ({ current }) => {
         ))}
       </div>
       <div className="border rounded-xl p-4 w-full px-10 text-gray-500">
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center cursor-pointer">
           <div className="flex gap-1 items-center text-xs">
             <ChatIcon /> Chat
           </div>
@@ -120,17 +124,21 @@ const UserChats = ({ current }) => {
           />
 
           <div className="flex gap-4 relative">
-            <img src={UploadIcon} />
-            <img src={smileIcon} />
+            <img src={UploadIcon} className="cursor-pointer" />
+            <img src={smileIcon} className="cursor-pointer" />
             <div className="border-l pl-4 ">
-              <img src={videoIcon} />
+              <img src={videoIcon} className="cursor-pointer" />
             </div>
-            <div className="absolute right-0" onClick={handleSubmit}>
+            <div
+              className="absolute right-0 cursor-pointer"
+              onClick={handleSubmit}
+            >
               <SenderIcon />
             </div>
           </div>
         </form>
       </div>
+      
     </div>
   )
 }
