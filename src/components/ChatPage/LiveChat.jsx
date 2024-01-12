@@ -5,6 +5,7 @@ import { messages, users } from './data'
 import CallPage from './CallPage'
 import UserChats from './UsersChat'
 import UsersDetails from './UsersDetails'
+import VideoPage from './VideoPage'
 
 const LiveChat = () => {
   return (
@@ -97,6 +98,7 @@ const MessageBar = () => {
         <UsersDetails details={details} />
       </div>
       <CallPage />
+      <VideoPage />
     </>
   )
 }

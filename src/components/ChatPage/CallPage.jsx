@@ -11,7 +11,7 @@ import voice from './Icons/voice.svg'
 
 const CallPage = () => {
   return (
-    <div className="bg-[#1b1349] w-4/5 pb-[0.5px] max-h-[100vh]">
+    <div className="bg-[#1b1349] pb-[0.5px] mx-5 ">
       <div className="text-gray-100  p-5 m-10 text-sm ">
         <div className="flex justify-between">
           <div className="flex gap-5">
@@ -50,7 +50,7 @@ const CallPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 cursor-pointer">
           <div>
             <img src={micblack} />
           </div>
