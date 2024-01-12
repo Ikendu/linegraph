@@ -2,9 +2,7 @@ import { useState } from 'react'
 import { BellIcon, DotIcon, SearchIcon } from '../../assets/IconMessage'
 import { messages, users } from './data'
 
-import CallPage from './CallPage'
 import UserChats from './UsersChat'
-import UsersDetails from './UsersDetails'
 import VideoPage from './VideoPage'
 
 const LiveChat = () => {
@@ -94,10 +92,10 @@ const MessageBar = () => {
             ))}
           </div>
         </div>
-        <UserChats current={current} />
-        <UsersDetails details={details} />
+        <UserChats current={current} details={details} />
+        {/* <UsersDetails details={details} /> */}
       </div>
-      <CallPage />
+
       <VideoPage />
     </>
   )

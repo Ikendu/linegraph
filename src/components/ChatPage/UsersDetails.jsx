@@ -23,7 +23,7 @@ const UsersDetails = ({ details }) => {
             <p>Viewed Pages</p>
           </div>
           <hr />
-          {details.map((detail, idx) => (
+          {details?.map((detail, idx) => (
             <>
               <div
                 key={idx}

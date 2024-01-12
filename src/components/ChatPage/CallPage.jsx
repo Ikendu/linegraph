@@ -9,9 +9,9 @@ import minimise from './Icons/minimize.svg'
 import smile2 from './Icons/smile2.svg'
 import voice from './Icons/voice.svg'
 
-const CallPage = () => {
+const CallPage = ({ setOpen }) => {
   return (
-    <div className="bg-[#1b1349] pb-[0.5px] mx-5 ">
+    <div className="bg-[#1b1349] pb-[0.5px] mt-20 ">
       <div className="text-gray-100  p-5 m-10 text-sm ">
         <div className="flex justify-between">
           <div className="flex gap-5">
@@ -24,7 +24,10 @@ const CallPage = () => {
             </div>
           </div>
 
-          <div className="bg-[#0f0f3a] p-1 rounded-full ">
+          <div
+            className="bg-[#0f0f3a] p-1 rounded-full "
+            onClick={() => setOpen(false)}
+          >
             <img src={minimise} />
           </div>
         </div>
@@ -66,7 +69,7 @@ const CallPage = () => {
           <div>
             <img src={DotVert} />
           </div>
-          <div>
+          <div onClick={() => setOpen(false)}>
             <img src={call} />
           </div>
         </div>
